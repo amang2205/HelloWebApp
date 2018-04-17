@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelloClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,8 @@ namespace HelloWebApp.Controllers
     {
         public ActionResult Index()
         {
+            var person = new Person() { FirstName = "Alex", LastName = "Mang" };
+            ViewBag.Greeting = person.Greet();
             return View();
         }
 
